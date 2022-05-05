@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href=""><img src="img/logo.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">MENU</a></li>
+                <li><a href="#">WHAT'S NEW</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </header>
+        
+        <div class="content">
+            <div class="textBox">
+                <h2>WE MAKE IT THE HARD WAY. <br>We are <span>KFC</span> </h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam sunt soluta quo cum. Molestias, laborum! Culpa ad facilis, tempora ex doloremque facere nisi iure at, corrupti itaque commodi odit enim?</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="img/chicken.png" class="KFC">
+            </div>
+        </div>
+        <div>
+            <ul class="thumb">
+                <li><img src="img/chicken.png" onclick="imgSlider('img/chicken.png'); changeCircleColor('#E5002A')"></li>
+                <li><img src="img/fries.png" onclick="imgSlider('img/fries.png'); changeCircleColor('#FCAE45')"></li>
+                <li><img src="img/hambergur.png" onclick="imgSlider('img/hambergur.png'); changeCircleColor('#DE802B')"></li>
+                <li><img src="img/pepsi.png" onclick="imgSlider('img/pepsi.png'); changeCircleColor('#442424')"></li>
+            </ul>
+            <ul class="sci">
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.KFC').src = anything;
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+
+    </script>
+</body>
+</html>
